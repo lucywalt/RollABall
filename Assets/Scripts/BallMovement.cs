@@ -4,6 +4,7 @@ public class BallMovement : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Rigidbody sphereRigidBody;
+    public float ballSpeed = 2f;
     
     
     void Start()
@@ -39,7 +40,7 @@ public class BallMovement : MonoBehaviour
         }
 
         Vector3 inputXZPlane = new Vector3(inputVector.x, 0, inputVector.y);
-        sphereRigidBody.AddForce(inputXZPlane);
+        sphereRigidBody.AddForce(inputXZPlane*ballSpeed);
 
         Debug.Log("Resultant Vector: " + inputVector);
         Debug.Log("Resultant 3D Vector: " + inputXZPlane);
