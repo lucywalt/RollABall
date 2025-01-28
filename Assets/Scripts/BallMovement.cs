@@ -3,8 +3,8 @@ using UnityEngine;
 public class BallMovement : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public Rigidbody sphereRigidBody;
-    public float ballSpeed = 2f;
+    [SerializeField] private Rigidbody sphereRigidBody;
+    [SerializeField] private float ballSpeed = 2f;
     
     
     void Start()
